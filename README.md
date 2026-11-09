@@ -38,3 +38,12 @@ Durante este mini-projeto, foram observados aspectos cruciais de Qualidade dos D
 **Perfil Familiar (Número de Filhos - `CL_FHL`):** A média de filhos por cliente é de 1,14, porém a mediana e a moda são 0,00, indicando que a grande maioria dos clientes registrados não possui filhos cadastrados (75% da base tem até 2 filhos, com pico máximo em 4 filhos).  
 **Tratamento de Anomalias de Cadastro:** Um total de 3.228 registros continha a flag de erro `#N/D` tanto no nome quanto na categoria do produto. Esses registros foram mantidos para preservação do volume transacional, mas reclassificados sob o rótulo `"SEM CATEGORIA"` e `"NÃO IDENTIFICADO"`.  
 
+## Sprints de Desenvolvimento
+
+**Sprint 1 (Importação dos dados):** Leitura do arquivo `Base_Varejo.csv` utilizando `pd.read_csv()` com delimitador `;` e mapeamento da estrutura original (830.000 linhas x 14 colunas).  
+**Sprint 2 (Transformação e Tipagem):** Conversão da coluna `DATA` de `object` para `datetime64[ns]`.  
+**Sprint 3 (Limpeza de Nulos e Duplicatas):** Dropped 4 colunas nulas geradas no parsing (`Unnamed: 10` a `13`), remoção de 96.553 duplicatas e substituição condicional de valores `#N/D`.  
+**Sprint 4 (Estatística Descritiva):** Apuração de média, mediana, desvio padrão, moda, quartis e limites (min/max) da coluna `CL_FHL` (número de filhos).  
+**Sprint 5 (Relatório e Documentação):** Agrupamento das vendas por categoria (`PR_CAT`) e segmento (`CL_SEG`), cálculo percentual, síntese de conclusões do projeto e criação do conteúdo do README.  
+**Sprint 6 (Versionamento):** Publicação do repositório no GitHub acompanhado do histórico incremental de commits.  
+
