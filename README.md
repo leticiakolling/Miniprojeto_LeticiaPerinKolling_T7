@@ -21,3 +21,12 @@ https://www.kaggle.com/datasets/namespaiva/base-varejo/data
 Clique no menu superior em Ambiente de execução (Runtime).
 Selecione a opção Executar tudo (Run all) ou use o atalho `Ctrl + F9`.
 
+## Reflexão Teórica: ETL e Qualidade de Dados
+
+Na análise de dados real, dados brutos raramente vêm prontos para consumo. O processo de ETL (Extract, Transform, Load) garante que dados de fontes diversas sejam padronizados e validados antes de servirem para tomadas de decisão ou dashboards.
+Durante este mini-projeto, foram observados aspectos cruciais de Qualidade dos Dados:
+
+**Completude:** A base continha colunas totalmente sem preenchimento (`Unnamed: 10` a `13`), além de valores codificados como `#N/D`. A remoção e o imputamento planejado garantiram a integridade dos cálculos.
+**Unicidade (Duplicidade):** Foram identificadas 96.553 linhas totalmente duplicadas. A remoção foi essencial para evitar a contagem dupla de vendas e a distorção dos volumes transacionados.
+**Consistência de Tipos:** A coluna de datas veio como string (`object`) e foi devidamente convertida para o tipo `datetime64`, permitindo validações temporais adequadas.
+
