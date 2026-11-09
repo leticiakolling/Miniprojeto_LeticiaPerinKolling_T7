@@ -27,6 +27,8 @@ Na análise de dados real, dados brutos raramente vêm prontos para consumo. O p
 Durante este mini-projeto, foram observados aspectos cruciais de Qualidade dos Dados:
 
 **Completude:** A base continha colunas totalmente sem preenchimento (`Unnamed: 10` a `13`), além de valores codificados como `#N/D`. A remoção e o imputamento planejado garantiram a integridade dos cálculos.
+
 **Unicidade (Duplicidade):** Foram identificadas 96.553 linhas totalmente duplicadas. A remoção foi essencial para evitar a contagem dupla de vendas e a distorção dos volumes transacionados.
+
 **Consistência de Tipos:** A coluna de datas veio como string (`object`) e foi devidamente convertida para o tipo `datetime64`, permitindo validações temporais adequadas.
 
